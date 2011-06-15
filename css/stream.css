@@ -1,0 +1,50 @@
+div#stream {
+    text-align: left;
+    margin: 0 auto;
+    position: relative;
+}
+
+li.service-icon {
+    background: url("../images/services/other.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    padding-left: 20px;
+    padding-top: 1px;
+    overflow: hidden;
+    min-width: 16px;
+    min-height: 18px;
+    margin-bottom: 1em;
+}
+
+li.service-icon p,pre {
+    margin-bottom: 0 !important;
+    margin-left: 2em;
+    font-size: 85%;
+}
+
+li.service-twitter {
+    background-image: url("../images/services/twitter.png");
+}
+
+li.service-github {
+    background-image: url("../images/services/github.png");
+}
+
+a.time {
+    font-size: smaller;
+    color: #565656;
+}
+
+.textimage {
+   vertical-align: text-top;
+   height: 1em;
+   margin-right: 0.1em;
+}
+
+.fancybox {
+  width: 150px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #d5d1c2;
+  display: block;
+  margin: 5px;
+}

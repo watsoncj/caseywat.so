@@ -1,0 +1,14 @@
+body {
+background: #E6E2D3;
+color: #5E5A4B;
+font-size: 14px;
+}
+
+a {
+  color: #9C5137;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #7A2F15;
+}
