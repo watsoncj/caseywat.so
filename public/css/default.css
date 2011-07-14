@@ -747,12 +747,13 @@ mark {
 .social li img {
   float: left;
   margin-right: 1em;
-  box-shadow: 0 1px 2px 0 #b3afa0;
+/*  box-shadow: 0 1px 2px 0 #b3afa0;
   -webkit-box-shadow: 0 1px 2px 0 #b3afa0;
   -moz-box-shadow: 0 1px 2px 0 #b3afa0;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 4px;*/
+  border: none;
 }
 .social li.odd {
   clear: left;
