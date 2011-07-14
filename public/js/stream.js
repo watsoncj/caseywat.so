@@ -155,7 +155,7 @@ var stream = (function(){
                     }
                 })
                 fetchCount--;
-                $('.load').toggle(fetchCount>0);
+                if (fetchCount<=0) $('.load').hide('slow');
             })
         }
     }
@@ -260,7 +260,7 @@ var stream = (function(){
                     add_stream(result)
                 })
                 fetchCount--;
-                $('.load').toggle(fetchCount>0);
+                if (fetchCount<=0) $('.load').hide('slow');
             })
         }
     }
