@@ -1,23 +1,25 @@
 /* library taken from http://wades.im/mons/ */
 var stream = (function(){
+    var fetchCount = 0;
+
     function Activity(args) {
         this.title = args.title
         this.body = args.body
         this.timestamp = args.timestamp
         this.url = args.url
     }
-    
+
     function pad(val, len) {
         val = String(val);
         len = len || 2;
         while (val.length < len) val = "0" + val;
         return val;
     };
-    
+
     function escapeHTML(text) {
         return $('<div/>').text(text).html()
     }
-    
+
     function short_date(date) {
         return (date.getHours() % 12 || 12) + ":" + pad(date.getMinutes()) + (date.getHours() < 12 ? "am" : "pm")
     }
@@ -129,6 +131,7 @@ var stream = (function(){
         },
     
         fetch: function(username) {
+            fetchCount++;
             $.getJSON("http://github.com/"+username+".json?callback=?", function(data) {
                 $.each(data, function(i,entry) {
                     if (window.console) console.log(entry)
@@ -151,10 +154,12 @@ var stream = (function(){
                       if (window.console) console.error(err);
                     }
                 })
+                fetchCount--;
+                $('.load').toggle(fetchCount>0);
             })
         }
     }
-    
+
     var twitter = {
         linkify_entities: function(tweet) {
             if (!(tweet.entities)) {
@@ -240,6 +245,7 @@ var stream = (function(){
         },
         
         fetch: function(username) {
+            fetchCount++;
             $.getJSON("http://api.twitter.com/1/statuses/user_timeline/"+username+".json?include_entities=true&count=42&callback=?", function(data) {
                 $.each(data, function(i,entry) {
                     // console.log(entry)
@@ -253,6 +259,8 @@ var stream = (function(){
                     if (window.console) console.log(entry, result)
                     add_stream(result)
                 })
+                fetchCount--;
+                $('.load').toggle(fetchCount>0);
             })
         }
     }
