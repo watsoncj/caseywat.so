@@ -1,0 +1,57 @@
+<div class="post">
+
+
+       <h1 id="post-5"><a href="http://web.archive.org/web/20100206190401/http://casedogdesigns.com/wordpress/fixing-broken-cups-password-in-dapper/" rel="bookmark" title="Permanent Link: Fixing broken cups password in Dapper">Fixing broken cups password in Dapper</a></h1>
+
+           <div class="entrytext">
+           <p>Today while trying to configure my laptop to print to a network printer, I ran into some issues that I thought others might also have trouble with.</p>
+<p>The first issue is that by default, network printer auto-discovery is disabled. Though this is not necessary to be able to add a printer, enabling it makes the process much easier. To enable network printer auto-discovery, run</p>
+<blockquote><p>sudo ln -s  ../backend-available/snmp /usr/lib/cups/backend/snmp</p></blockquote>
+<p>Now to see the detected printers use [url]http://localhost:631/admin[/url]. You should see a list of detected printers and be able to add them from there.</p>
+<p>The next problem was that the cups admin won’t accept your login. This is supposed to be your root user and password. To work around this just open the cupsd.conf file in your favorite editor.</p>
+<blockquote><p>sudo gedit /etc/cups/cupsd.conf</p></blockquote>
+<p>Then comment any lines that begin with AuthType or Require. I found 6 lines that needed to be commented out. So the following lines in cupsd.conf.</p>
+<blockquote><p>…<br>
+AuthType Basic<br>
+Requre user @SYSTEM<br>
+…<br>
+Require user @OWNER @SYSTEM<br>
+…<br>
+AuthType Basic<br>
+Require user @SYSTEM<br>
+…<br>
+Require user @OWNER @SYSTEM<br>
+…</p></blockquote>
+<p>Needed to be changed to the following</p>
+<blockquote><p>…<br>
+#AuthType Basic<br>
+#Requre user @SYSTEM<br>
+…<br>
+#Require user @OWNER @SYSTEM<br>
+…<br>
+#AuthType Basic<br>
+#Require user @SYSTEM<br>
+…<br>
+#Require user @OWNER @SYSTEM<br>
+…</p></blockquote>
+<p>After enabling network printer auto-discovery and disabling the password authentication in the cups manger, I can easily add network printers.</p>
+                      <br>
+
+<p class="postmetadata2 alt">
+This entry was posted on Wednesday, November 29th, 2006 by <a href="http://web.archive.org/web/20100206190401/http://">Casey Watson</a>
+and is filed under <a href="http://web.archive.org/web/20100206190401/http://casedogdesigns.com/wordpress/category/ubuntu/" title="View all posts in Ubuntu" rel="category tag">Ubuntu</a>.
+You can follow any responses to this entry through the <a href="http://web.archive.org/web/20100206190401/http://casedogdesigns.com/wordpress/fixing-broken-cups-password-in-dapper/feed/">RSS 2.0</a> feed. 
+You can <a href="http://web.archive.org/web/20100206190401/http://casedogdesigns.com/wordpress/fixing-broken-cups-password-in-dapper/#respond">leave a response</a> or <a href="http://web.archive.org/web/20100206190401/http://casedogdesigns.com/wordpress/fixing-broken-cups-password-in-dapper/trackback/">Trackback</a> from your own site.<br>
+<br class="clear">
+</p>
+
+<div>&nbsp;</div>
+<div class="navigation">
+<div class="alignleft">« <a href="http://web.archive.org/web/20100206190401/http://casedogdesigns.com/wordpress/ubuntu-inconsistent-apt-get-state/">Ubuntu, Inconsistent apt-get State</a></div>
+<div class="alignright"> <a href="http://web.archive.org/web/20100206190401/http://casedogdesigns.com/wordpress/octal-notation-in-regex/">Octal Notation in Regex</a> »</div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+</div>
+</div>

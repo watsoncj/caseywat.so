@@ -1,0 +1,51 @@
+<div class="post">
+
+
+       <h1 id="post-6"><a href="http://web.archive.org/web/20100203163627/http://casedogdesigns.com/wordpress/octal-notation-in-regex/" rel="bookmark" title="Permanent Link: Octal Notation in Regex">Octal Notation in Regex</a></h1>
+
+           <div class="entrytext">
+           <p>I recently needed to replace the non-standard extended characters that ms-word uses for quotes in over 80 pages. The octal notation available in regular expressions proved to be very helpful. To use octal in a regular expression just escape the three number code like \200.<br>
+[code lang="php"]<br>
+<!--?php<br /-->
+#!/usr/bin/php -q<br>
+for($id = 1; $id&lt;82; $id++) {<br>
+$text=mysql_result($result,0,"content");<br>
+$new_text = ereg_replace("Ã¢\200\234","\"",$text);<br>
+$text = $new_text;<br>
+$new_text = ereg_replace("Ã¢\200\235","\"",$text);<br>
+$text = $new_text;<br>
+$new_text = ereg_replace("Ã¢\200\223","-",$text);<br>
+$text = $new_text;<br>
+$new_text = ereg_replace("Ã¢\200\231","'",$text);<br>
+$text = $new_text;<br>
+$new_text = ereg_replace("Ã¢\200\230","'",$text);<br>
+$text = $new_text;<br>
+$new_text = ereg_replace("Ã¢\200","",$text);<br>
+$text = $new_text;<br>
+$new_text = ereg_replace("Ã¢","\"",$text);<br>
+$text = $new_text;<br>
+$new_text = ereg_replace("\r\n","\n",$text);<br>
+$escaped_text = mysql_escape_string($text);<br>
+}<br>
+?&gt;<br>
+[/code]</p>
+                      <br>
+
+<p class="postmetadata2 alt">
+This entry was posted on Wednesday, November 29th, 2006 by <a href="http://web.archive.org/web/20100203163627/http://">Casey Watson</a>
+and is filed under <a href="http://web.archive.org/web/20100203163627/http://casedogdesigns.com/wordpress/category/php/" title="View all posts in PHP" rel="category tag">PHP</a>.
+You can follow any responses to this entry through the <a href="http://web.archive.org/web/20100203163627/http://casedogdesigns.com/wordpress/octal-notation-in-regex/feed/">RSS 2.0</a> feed. 
+You can <a href="http://web.archive.org/web/20100203163627/http://casedogdesigns.com/wordpress/octal-notation-in-regex/#respond">leave a response</a> or <a href="http://web.archive.org/web/20100203163627/http://casedogdesigns.com/wordpress/octal-notation-in-regex/trackback/">Trackback</a> from your own site.<br>
+<br class="clear">
+</p>
+
+<div>&nbsp;</div>
+<div class="navigation">
+<div class="alignleft">« <a href="http://web.archive.org/web/20100203163627/http://casedogdesigns.com/wordpress/fixing-broken-cups-password-in-dapper/">Fixing broken cups password in Dapper</a></div>
+<div class="alignright"> <a href="http://web.archive.org/web/20100203163627/http://casedogdesigns.com/wordpress/curling-google-for-fun-and-profit/">cURLing Google for Fun and Profit</a> »</div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+</div>
+</div>

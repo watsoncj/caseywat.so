@@ -1,0 +1,40 @@
+<div class="post">
+
+
+       <h1 id="post-17"><a href="http://web.archive.org/web/20081119092753/http://casedogdesigns.com/wordpress/gutsy-and-the-nv11-geforce2-mxmx-400/" rel="bookmark" title="Permanent Link: Gutsy and the GeForce2 MX/MX 400">Gutsy and the GeForce2 MX/MX 400</a></h1>
+
+           <div class="entrytext">
+           <p>I have had quite a tough time trying to get my ancient nvidia graphics card to work to it’s full potential after upgrading to Gutsy. My graphics card as reported by lspci is:</p>
+<blockquote><p> 01:00.0 VGA compatible controller: nVidia Corporation NV11 [GeForce2 MX/MX 400] (rev b2)</p></blockquote>
+<p>After trying to use the ‘Screen and Graphics Preference’ utility, I was not able to get a resolution of 1400×1050 that would actually stick around after reboot. Upon inspecting the xorg logs I found the following (it also appears in Xorg.0.log.old).</p>
+<blockquote><p>(==) Log file: “/var/log/Xorg.0.log”, Time: Thu Oct 18 23:12:59 2007<br>
+(++) Using config file: “/etc/X11/xorg.conf.failsafe”</p></blockquote>
+<p>The only way I have been able to get a high resolution that doesn’t boot into failsafe mode every time is by removing the  xorg configuration file.</p>
+<blockquote><p>sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.wtf</p></blockquote>
+<p>After that, my machine happily boots into the highest supported resolution.</p>
+<blockquote><p>(==) Log file: “/var/log/Xorg.0.log”, Time: Mon Oct 22 22:42:18 2007<br>
+(EE) Unable to locate/open config file<br>
+(–) PCI:*(1:0:0) nVidia Corporation NV11 [GeForce2 MX/MX 400] rev 178, Mem @ 0xde000000/24, 0xd0000000/27, BIOS @ 0xdfef0000/16<br>
+New driver is “nv”</p></blockquote>
+<p>The machine runs much faster with the nv drivers than it did in fail-safe mode. However, I would still like to get this thing using some real hardware acceleration. Any ideas?</p>
+<p><strong><em>Update Oct 27, 2007:</em></strong> <em>I was able to use <a href="http://web.archive.org/web/20081119092753/http://albertomilone.com/nvidia_scripts1.html" title="Envy">Envy</a> to install the proprietary Nvidia drivers. Though probably not the ideal solution it was very simple and straightforward. After the reboot, things were not quite at the highest resolution. To fix this I ran the ‘Screens and Graphics Preferences’ setup utility. I chose ‘LCD Panel 1400×1050′. After logging out the X-server came up at full resolution.</em></p>
+                      <br>
+
+<p class="postmetadata2 alt">
+This entry was posted on Tuesday, October 23rd, 2007 by <a href="">Casey Watson</a>
+and is filed under <a href="http://web.archive.org/web/20081119092753/http://casedogdesigns.com/wordpress/category/ubuntu/" title="View all posts in Ubuntu" rel="category tag">Ubuntu</a>.
+You can follow any responses to this entry through the <a href="http://web.archive.org/web/20081119092753/http://casedogdesigns.com/wordpress/gutsy-and-the-nv11-geforce2-mxmx-400/feed/">RSS 2.0</a> feed. 
+You can <a href="http://web.archive.org/web/20081119092753/http://casedogdesigns.com/wordpress/gutsy-and-the-nv11-geforce2-mxmx-400/#respond">leave a response</a> or <a href="http://web.archive.org/web/20081119092753/http://casedogdesigns.com/wordpress/gutsy-and-the-nv11-geforce2-mxmx-400/trackback/">Trackback</a> from your own site.<br>
+<br class="clear">
+</p>
+
+<div>&nbsp;</div>
+<div class="navigation">
+<div class="alignleft">« <a href="http://web.archive.org/web/20081119092753/http://casedogdesigns.com/wordpress/changing-default-ubuntu-editor/">Changing the default Ubuntu editor</a></div>
+<div class="alignright"> <a href="http://web.archive.org/web/20081119092753/http://casedogdesigns.com/wordpress/guest-post-eclipse-332-and-dbedit/">Guest Post: Eclipse 3.3.2 and DBEdit</a> »</div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+</div>
+</div>

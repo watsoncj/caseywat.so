@@ -1,0 +1,46 @@
+<div class="post">
+
+
+       <h1 id="post-4"><a href="http://web.archive.org/web/20100104035715/http://casedogdesigns.com/wordpress/ubuntu-inconsistent-apt-get-state/" rel="bookmark" title="Permanent Link: Ubuntu, Inconsistent apt-get State">Ubuntu, Inconsistent apt-get State</a></h1>
+
+           <div class="entrytext">
+           <p>I recently installed a debian package that left apt-get in a very bad state. Whenever I tried to upgrade or install a package I received the following error.</p>
+<blockquote><p>% sudo apt-get upgrade<br>
+Reading package lists… Done<br>
+Building dependency tree… Done<br>
+E: The package jedit needs to be reinstalled, but I can’t find an archive for it.</p></blockquote>
+<p>If I tried to uninstall the package I would get the following.</p>
+<blockquote><p>% sudo dpkg –remove jedit<br>
+dpkg: error processing jedit (–remove):<br>
+Package is in a very bad inconsistent state – you should<br>
+reinstall it before attempting a removal.<br>
+Errors were encountered while processing: jedit</p></blockquote>
+<p>The only way I was able to get the package manager working properly was to run</p>
+<blockquote><p>% sudo dpkg –force-remove-reinstreq –remove jedit<br>
+dpkg – warning, overriding problem because –force enabled:<br>
+Package is in a very bad inconsistent state – you should<br>
+reinstall it before attempting a removal.<br>
+(Reading database …<br>
+dpkg: serious warning: files list file for package `jedit’ missing, assuming package has no files currently installed.<br>
+107365 files and directories currently installed.)<br>
+Removing jedit …</p></blockquote>
+                      <br>
+
+<p class="postmetadata2 alt">
+This entry was posted on Wednesday, November 29th, 2006 by <a href="http://web.archive.org/web/20100104035715/http://">Casey Watson</a>
+and is filed under <a href="http://web.archive.org/web/20100104035715/http://casedogdesigns.com/wordpress/category/ubuntu/" title="View all posts in Ubuntu" rel="category tag">Ubuntu</a>.
+You can follow any responses to this entry through the <a href="http://web.archive.org/web/20100104035715/http://casedogdesigns.com/wordpress/ubuntu-inconsistent-apt-get-state/feed/">RSS 2.0</a> feed. 
+You can <a href="http://web.archive.org/web/20100104035715/http://casedogdesigns.com/wordpress/ubuntu-inconsistent-apt-get-state/#respond">leave a response</a> or <a href="http://web.archive.org/web/20100104035715/http://casedogdesigns.com/wordpress/ubuntu-inconsistent-apt-get-state/trackback/">Trackback</a> from your own site.<br>
+<br class="clear">
+</p>
+
+<div>&nbsp;</div>
+<div class="navigation">
+<div class="alignleft">« <a href="http://web.archive.org/web/20100104035715/http://casedogdesigns.com/wordpress/3/">Fingerprint Reader on Ubuntu</a></div>
+<div class="alignright"> <a href="http://web.archive.org/web/20100104035715/http://casedogdesigns.com/wordpress/fixing-broken-cups-password-in-dapper/">Fixing broken cups password in Dapper</a> »</div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+</div>
+</div>

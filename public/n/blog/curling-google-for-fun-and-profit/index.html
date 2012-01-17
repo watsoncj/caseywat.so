@@ -1,0 +1,25 @@
+<div class="post">
+				<h1 id="post-7"><a href="http://web.archive.org/web/20090215114557/http://casedogdesigns.com/wordpress/curling-google-for-fun-and-profit/" rel="bookmark" title="Permanent Link to cURLing Google for Fun and Profit">cURLing Google for Fun and Profit</a></h1>
+				
+				
+				<div class="entry">
+					
+<p>Here is an example of brute force engine searching. It does nothing more than perform a large number of searches in a very short time. Beware this is not a very nice thing to do and it is a terrible waste of network, and CPU resources. This is given as an example of the   power of cURL. This script is written in PHP and uses the libcurl libraries.<br>
+[code lang="php"]<br>
+<!--?php<br /-->
+$base_url = "http://www.google.com/search";<br>
+$ch = curl_init();</p>
+<p>for($i=0; $i&lt;20; $i++) {<br>
+  $url = $base_url . "?q=$i";<br>
+  curl_setopt($ch, CURLOPT_URL, $url);<br>
+  curl_exec($ch);<br>
+}</p>
+<p>curl_close($ch);<br>
+?&gt;<br>
+[/code]</p>
+				</div>
+		
+				
+<p class="postmetadata">29. November 2006 | <a href="http://web.archive.org/web/20090215114557/http://casedogdesigns.com/wordpress/category/php/" title="View all posts in PHP" rel="category tag">PHP</a>,  <a href="http://web.archive.org/web/20090215114557/http://casedogdesigns.com/wordpress/category/curl/" title="View all posts in cURL" rel="category tag">cURL</a> <!--| <a href="http://casedogdesigns.com/wordpress/curling-google-for-fun-and-profit/trackback/" rel="Trackback"> Trackback URL</a> -->| <a href="http://web.archive.org/web/20090215114557/http://casedogdesigns.com/wordpress/curling-google-for-fun-and-profit/#respond" title="Comment on cURLing Google for Fun and Profit">Comments (0)</a> </p>
+
+			</div>

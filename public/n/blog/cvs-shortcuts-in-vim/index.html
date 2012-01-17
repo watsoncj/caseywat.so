@@ -1,0 +1,51 @@
+<div class="post">
+
+
+       <h1 id="post-27"><a href="http://web.archive.org/web/20090106071332/http://casedogdesigns.com/wordpress/cvs-shortcuts-in-vim/" rel="bookmark" title="Permanent Link: CVS Shortcuts in Vim">CVS Shortcuts in Vim</a></h1>
+
+           <div class="entrytext">
+           <p>Vim is an incredibly flexible text editor. I continue to be surprised by the number of strange things it’s capable of doing. For example, there is a crude Tetris clone available for Vim.</p>
+<p>A bit more useful, though, is the cvsmenu script for Vim. This is a fairly polished plug-in that will allow you to do all of the basic CVS tasks from inside your text editor. The supported CVS commands are: add, diff, commit, update, status, shortstatus, localstatus, and revertchanges.</p>
+<p>Since the plug-in is poorly documented, I thought that I would take this opportunity to explain how to use it.</p>
+<p><strong>Installation</strong></p>
+<p>In Ubuntu, this is pretty simple.</p>
+<blockquote><p>% sudo aptitude install vim-scripts</p>
+<p>% vim-addons install cvsmenu</p></blockquote>
+<p>This will install the package and enable the plugin for your user.</p>
+<p><strong>Usage</strong></p>
+<p>I will assume that you already have a versioned source tree checked out on your system. Start by opening a file in this tree. You can open a diff view by typing “,cd”. <em>Note: that’s comma, C, D.</em></p>
+<p><a href="http://web.archive.org/web/20090106071332/http://casedogdesigns.com/wordpress/wp-content/uploads/2008/06/cvs-diff.png"><img class="alignnone size-medium wp-image-29" title="cvs-diff" src="http://web.archive.org/web/20090106071332im_/http://casedogdesigns.com/wordpress/wp-content/uploads/2008/06/cvs-diff-300x166.png" alt="" width="300" height="166"></a></p>
+<p style="clear:left;">
+</p><p>The local revision is shown on the right, the remote revision is on the left. This is a bit backwards from the Eclipse and Netbeans way of doing things. Typing CTRL+W+W will move your cursor between the two revisions. <em>I haven’t found an easy way to move a change to the right, but I would be interested in reader comments.</em></p>
+<p>Here is an index of the commands. They may be documentation somewhere but I was only able to find them by looking at the plug-in source code.</p>
+<ul>
+<li>,ca - Add</li>
+<li>,cd - Diff</li>
+<li>,ci - Commit</li>
+<li>,cu - Update</li>
+<li>,cs - Status</li>
+<li>,ch - Short Status</li>
+<li>,cc - Local Status</li>
+<li>,cv - Revert Local Changes. The odd thing about this is that it only updates the file on disk. It doesn’t actually revert the changes in the open editor.</li>
+</ul>
+<p>Modern IDEs do ease the pain of performing mundane versioning tasks such as merging. But, this is a nice alternative to those heavy-weight tools.</p>
+                      <br>
+
+<p class="postmetadata2 alt">
+This entry was posted on Friday, June 13th, 2008 by <a href="">Casey Watson</a>
+and is filed under <a href="http://web.archive.org/web/20090106071332/http://casedogdesigns.com/wordpress/category/linux/" title="View all posts in Linux" rel="category tag">Linux</a>,  <a href="http://web.archive.org/web/20090106071332/http://casedogdesigns.com/wordpress/category/ubuntu/" title="View all posts in Ubuntu" rel="category tag">Ubuntu</a>.
+You can follow any responses to this entry through the <a href="http://web.archive.org/web/20090106071332/http://casedogdesigns.com/wordpress/cvs-shortcuts-in-vim/feed/">RSS 2.0</a> feed. 
+You can <a href="http://web.archive.org/web/20090106071332/http://casedogdesigns.com/wordpress/cvs-shortcuts-in-vim/#respond">leave a response</a> or <a href="http://web.archive.org/web/20090106071332/http://casedogdesigns.com/wordpress/cvs-shortcuts-in-vim/trackback/">Trackback</a> from your own site.<br>
+<br class="clear">
+</p>
+
+<div>&nbsp;</div>
+<div class="navigation">
+<div class="alignleft">« <a href="http://web.archive.org/web/20090106071332/http://casedogdesigns.com/wordpress/socialthing-and-prism-on-ubuntu/">socialthing! and Prism on Ubuntu</a></div>
+<div class="alignright"> <a href="http://web.archive.org/web/20090106071332/http://casedogdesigns.com/wordpress/easy-zebra-striping-with-prototype/">Easy Zebra Striping with Prototype</a> »</div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+</div>
+</div>
