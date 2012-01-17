@@ -1,0 +1,32 @@
+<div class="post">
+
+
+         <h1 id="post-9"><a href="http://web.archive.org/web/20090213145331/http://casedogdesigns.com/wordpress/bad-interpreter-no-such-file-or-directory/" rel="bookmark" title="Permanent Link: bad interpreter: No such file or directory">bad interpreter: No such file or directory</a></h1>
+
+                    <div class="entrytext">
+                                 <p>When my tomcat context suddenly wouldn’t start anymore I found myself scratching my head. I couldn’t figure out why the startup.sh script always threw the error</p>
+                                 <blockquote><p>bash: ./catalina.sh: /bin/sh^M: bad interpreter: No such file or directory</p></blockquote>
+                                 <p>After investigating for a while I found that I had two seemingly identical files. One would run fine, the other threw a “bad interpreter” error.</p>
+                                 <p>Apparently if a shell script gets opened and saved in notepad it will not run anymore.</p>
+                                 <p>A simple “dos2unix catalina.sh” fixed the problem.</p>
+                                 <p>In Ubuntu the dos2unix binary can be found in the tofrodos package.</p>
+                                                       <br>
+
+                                                       <p class="postmetadata2 alt">
+                                                       This entry was posted on Thursday, December 14th, 2006 by <a href="">Casey Watson</a>
+                                                       and is filed under <a href="http://web.archive.org/web/20090213145331/http://casedogdesigns.com/wordpress/category/tomcat/" title="View all posts in Tomcat" rel="category tag">Tomcat</a>,  <a href="http://web.archive.org/web/20090213145331/http://casedogdesigns.com/wordpress/category/ubuntu/" title="View all posts in Ubuntu" rel="category tag">Ubuntu</a>.
+                                                       You can follow any responses to this entry through the <a href="http://web.archive.org/web/20090213145331/http://casedogdesigns.com/wordpress/bad-interpreter-no-such-file-or-directory/feed/">RSS 2.0</a> feed. 
+                                                       You can <a href="http://web.archive.org/web/20090213145331/http://casedogdesigns.com/wordpress/bad-interpreter-no-such-file-or-directory/#respond">leave a response</a> or <a href="http://web.archive.org/web/20090213145331/http://casedogdesigns.com/wordpress/bad-interpreter-no-such-file-or-directory/trackback/">Trackback</a> from your own site.<br>
+                                                       <br class="clear">
+                                                       </p>
+
+                                                       <div>&nbsp;</div>
+                                                       <div class="navigation">
+                                                         <div class="alignleft">« <a href="http://web.archive.org/web/20090213145331/http://casedogdesigns.com/wordpress/perl-file-io/">Perl File IO</a></div>
+                                                         <div class="alignright"> <a href="http://web.archive.org/web/20090213145331/http://casedogdesigns.com/wordpress/perlpod-gets-new-home/">PerlPod gets new home</a> »</div>
+                                                       </div>
+                                                       <div>&nbsp;</div>
+                                                       <div>&nbsp;</div>
+
+                                                     </div>
+                                                   </div>

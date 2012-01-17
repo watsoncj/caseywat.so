@@ -1,0 +1,35 @@
+<div class="post">
+
+
+         <h1 id="post-21"><a href="http://web.archive.org/web/20090106124251/http://casedogdesigns.com/wordpress/code-duplication/" rel="bookmark" title="Permanent Link: Code Duplication">Code Duplication</a></h1>
+
+                    <div class="entrytext">
+                                 <p>A while ago I fixed some obscure bugs in one of the search results pages of an enterprise application that I work on. I spent about four hours of focused development time refactoring and cleaning up some of the logic that handles the rendering and paging of the results. The new code worked well.</p>
+                                 <p>A couple of weeks later I found myself bug squashing on another search results page. As I dove into the code, I found a nagging sense of deja vu. This page had the same logic errors and mistakes as the page I had worked on weeks earlier. I found myself fixing the same bugs and performing the exact same refactorings as I had before.</p>
+                                 <p>I became more frustrated as I realized that the original author had copied all of the logic from the original page. Rather than extracting the common functionality to a reusable location, he took the lazy approach with copy and paste.</p>
+                                 <p>This kind of mistake is expensive. By duplicating the code, the cost of maintenance has doubled. Bugs must now be fixed in both places. Merging the common logic after the fact is more difficult than it would have been initially.</p>
+                                 <p>We have these wonderful object oriented languages. There are many ways to reuse code. Some of the following come to mind:</p>
+                                 <ul>
+                                   <li>Two subclasses can share common functionality in a parent class.</li>
+                                   <li>Duplicated code can be moved into it’s own class. This can be done in a concrete class or via a static utility class.</li>
+                                 </ul>
+                                                       <br>
+
+                                                       <p class="postmetadata2 alt">
+                                                       This entry was posted on Wednesday, March 19th, 2008 by <a href="">Casey Watson</a>
+                                                       and is filed under <a href="http://web.archive.org/web/20090106124251/http://casedogdesigns.com/wordpress/category/java/" title="View all posts in Java" rel="category tag">Java</a>.
+                                                       You can follow any responses to this entry through the <a href="http://web.archive.org/web/20090106124251/http://casedogdesigns.com/wordpress/code-duplication/feed/">RSS 2.0</a> feed. 
+                                                       You can <a href="http://web.archive.org/web/20090106124251/http://casedogdesigns.com/wordpress/code-duplication/#respond">leave a response</a> or <a href="http://web.archive.org/web/20090106124251/http://casedogdesigns.com/wordpress/code-duplication/trackback/">Trackback</a> from your own site.<br>
+                                                       <br class="clear">
+                                                       </p>
+
+                                                       <div>&nbsp;</div>
+                                                       <div class="navigation">
+                                                         <div class="alignleft">« <a href="http://web.archive.org/web/20090106124251/http://casedogdesigns.com/wordpress/time-based-releases/">Time Based Releases</a></div>
+                                                         <div class="alignright"> <a href="http://web.archive.org/web/20090106124251/http://casedogdesigns.com/wordpress/socialthing-and-prism-on-ubuntu/">socialthing! and Prism on Ubuntu</a> »</div>
+                                                       </div>
+                                                       <div>&nbsp;</div>
+                                                       <div>&nbsp;</div>
+
+                                                     </div>
+                                                   </div>
