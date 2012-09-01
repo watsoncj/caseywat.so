@@ -165,6 +165,13 @@
       'set_config','people.identify','people.set','people.increment'];for(e=0;e<h.length;e++)d(g,h[e]);
       a._i.push([b,c,f])};a.__SV=1.1;})(document,window.mixpanel||[]);
       mixpanel.init("ee87380455b5f4ccc25eea9088dca45c");
+
+      mixpanel.track('Index Page Loaded');
+
+      mixpanel.track_links('#container .intro a', 'Header Link Clicked');
+      mixpanel.track_links('#container .content a', 'Header Link Clicked');
+      mixpanel.track_links('#container .tab_container a', 'Content Link Clicked');
+
   </script>
 
   <!--[if lte IE 7 ]>
