@@ -5,7 +5,7 @@
 # See end for links
 
 set :application, "caseywat.so"
-set :repository,  "casedogdesigns.com:/home/git/#{application}.git"
+set :repository,  "git@github.com:watsoncj/caseywat.so.git"
 
 # some like to utilize a cache to speed up checkout/clone
 #set :deploy_via, :remote_cache
